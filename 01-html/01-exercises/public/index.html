@@ -3,89 +3,93 @@
 <head>
   <meta charset='utf-8'>
   <!-- add a title to do this document. call it 'Web Homework' -->
+  <title>Web Homework</title>
 </head>
 <body>
 
   <nav>
 
     <!-- Turn the following text into an unordered list with each item of the list linking to the appropriate web page. Indicate this page by making the text strong. -->
-
-    Index
-    Syllabus
-    Resources
-    Sections
-    Suggestions
-    People
+    <ul>  
+        <strong>
+           <li><a href="http://localhost:8000/index.html">Index</a></li>
+           <li><a href="http://localhost:8000/syllabus.html">Syllabus</a> </li>
+           <li><a href="http://localhost:8000/resources.html">Resources</a></li>
+           <li><a href="http://localhost:8000/suggestions.html">Suggestions</a></li>
+           <li><a href="http://localhost:8000/people.html">People</a></li>
+        </strong>
+    </ul>
 
   </nav>
 
   <section>
 
-    Web Homework <!-- Turn this into an h3 element -->
+    <h3>Web Homework</h3> <!-- Turn this into an h3 element -->
 
     <!-- The following text is copied verbatim from the README.md file. View the file on GitHub to see how it should appear. Modify the html so that it appears that way! Some tags you may want to use include <p>, <h3>, <h5>, <strong>, <em>, <a>, <ul>, and <li>. -->
+    <h1>SoBA Web Curriculum</h1>
+    <h3>Lesson 1: Git &amp; HTML</h3>
 
-    SoBA Web Curriculum
-    Lesson 1: Git &amp; HTML
+    <h3>Overview</h3>
 
-    Overview
+    <p>For this lesson you will create a new GitHub account for yourself ~ if you do not already have one ~ fork this repository to your own account, and clone it to your local machine for development. You will then complete the assignment as outlined in the instructions below and in the assignment's web pages.</p>
 
-    For this lesson you will create a new GitHub account for yourself ~ if you do not already have one ~ fork this repository to your own account, and clone it to your local machine for development. You will then complete the assignment as outlined in the instructions below and in the assignment's web pages.
+    <h1>Instructions</h1>
 
-    Instructions
+    <h3>GITHUB</h3>
 
-    GITHUB
+    <p>Git is a version control system. It allows you to track changes to your source files, explore development alternatives on branches that are independent of one another, and roll back changes that you have made in error. It's awesome.</p>
 
-    Git is a version control system. It allows you to track changes to your source files, explore development alternatives on branches that are independent of one another, and roll back changes that you have made in error. It's awesome.
+    <p>GitHub works with Git and allows us to collaborate on software projects. We can simultaneously edit a project's files without overwriting each other's work. Using git you can associate remote GitHub repositories with your local git repositories and then push and pull changes to and from the remote to your local machine.</p>
 
-    GitHub works with Git and allows us to collaborate on software projects. We can simultaneously edit a project's files without overwriting each other's work. Using git you can associate remote GitHub repositories with your local git repositories and then push and pull changes to and from the remote to your local machine.
+    <p>In order to do this, you need to set up a GitHub account.</p>
 
-    In order to do this, you need to set up a GitHub account.
+    <h5>Assignment 1</h5>
 
-    Assignment 1
+    <p>Create a new GitHub account. You will need to set up SSH keys, which will require interacting with the Terminal. Follow GitHub's instructions and work on this with your fellow students who already have experience setting up accounts.</p>
 
-    Create a new GitHub account. You will need to set up SSH keys, which will require interacting with the Terminal. Follow GitHub's instructions and work on this with your fellow students who already have experience setting up accounts.
+    <p>We will be distributing your home assignments via GitHub. A repository will be created for each homework assignment and posted to this account. You will need to fork this repository to your own GitHub account, effecitvely creating a copy of it for you to work on, and then clone that repository to your computer so you can edit it.</p>
 
-    We will be distributing your home assignments via GitHub. A repository will be created for each homework assignment and posted to this account. You will need to fork this repository to your own GitHub account, effecitvely creating a copy of it for you to work on, and then clone that repository to your computer so you can edit it.
+    <h5>Assignment 2</h5>
 
-    Assignment 2
+    <p>Fork this repository to your own GitHub account. Just press the Fork button at the top right of the page.</p>
 
-    Fork this repository to your own GitHub account. Just press the Fork button at the top right of the page.
+    <p>At this point, you should stop reading these instructions and start reading the instructions from your own copy of the repository!</p>
 
-    At this point, you should stop reading these instructions and start reading the instructions from your own copy of the repository!
+    <p>Now that you have your own personal copy of the assignment, you should download it to your machine by cloning it. Cloning the repository will initialize a new git repository on your computer and associate it with the remote repository in your account.</p>
 
-    Now that you have your own personal copy of the assignment, you should download it to your machine by cloning it. Cloning the repository will initialize a new git repository on your computer and associate it with the remote repository in your account.
+    <p>You'll find more information about cloning a repository at <a href="https://help.github.com/articles/fork-a-repo">https://help.github.com/articles/fork-a-repo</a></p>
 
-    You'll find more information about cloning a repository at https://help.github.com/articles/fork-a-repo
+    <h5>Assignment 3</h5>
 
-    Assignment 3
+    <p>Clone your copy of the repository from your account to your machine. You'll do this in the terminal following the instructions above.</p>
 
-    Clone your copy of the repository from your account to your machine. You'll do this in the terminal following the instructions above.
+    <p>You should now have a copy of the repository on your local machine!</p>
 
-    You should now have a copy of the repository on your local machine!
+    <p>Before you begin editing the HTML files for this assignment, you should create a development branch. Branching in git allows you to edit files while preserving their original content. Git makes it easy to switch back and forth between branches to see the effects of your changes as well as to merge branches when you are ready to keep your changes.</p>
 
-    Before you begin editing the HTML files for this assignment, you should create a development branch. Branching in git allows you to edit files while preserving their original content. Git makes it easy to switch back and forth between branches to see the effects of your changes as well as to merge branches when you are ready to keep your changes.
+    <p>You can read more about git branching at http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging. Incidentally, this is part of an excellent free book on git.</p>
 
-    You can read more about git branching at http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging. Incidentally, this is part of an excellent free book on git.
+    <h5>Assignment 4</h5>
 
-    Assignment 4
+    <p>Create a new 'development' branch in your local git repository. All changes to your html should be made in this branch. Only when you are satisfied with the changes should you merge them back into your main branch.</p>
 
-    Create a new 'development' branch in your local git repository. All changes to your html should be made in this branch. Only when you are satisfied with the changes should you merge them back into your main branch.
+    <h3>HTML5</h3>
 
-    HTML5
+    <h5>Assignment 5</h5>
 
-    Assignment 5
+    <p>You will find the rest of the instructions for this assignment embedded in the HTML itself. The general pattern is that you will be converting plain text into HTML, so you will need to add the necessary HTML tags. Look at each of the HTML files in the assignment. Instructions are provided in comments; add markup to the content.</p>
 
-    You will find the rest of the instructions for this assignment embedded in the HTML itself. The general pattern is that you will be converting plain text into HTML, so you will need to add the necessary HTML tags. Look at each of the HTML files in the assignment. Instructions are provided in comments; add markup to the content.
+   <p> You have three excellent resources to assist you in this process, in this order:</p>
 
-    You have three excellent resources to assist you in this process, in this order:
+    <ul>
+        <li>Your ridiculously huge HTML5 book</li>
+        <li>The Mozilla Developers Network</li>
+        <li>The always amazing StackOverflow</li>
+        <li>Assignment 6</li>
+    </ul>
 
-    Your ridiculously huge HTML5 book
-    The Mozilla Developers Network
-    The always amazing StackOverflow
-    Assignment 6
-
-    Recall that you have been working in a development branch in your repository. When you are finished editing the HTML, checkout the master branch, merge your changes, and push them to your GitHub account. Refer to the resources mentioned above in the GitHub section to learn how to do this.
+    <p>Recall that you have been working in a development branch in your repository. When you are finished editing the HTML, checkout the master branch, merge your changes, and push them to your GitHub account. Refer to the resources mentioned above in the GitHub section to learn how to do this.</p>
 
   </section>
 
