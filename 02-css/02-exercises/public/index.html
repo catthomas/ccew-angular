@@ -5,7 +5,7 @@
   <title>Navigation Bar</title>
 
   <!-- what does normalize.css do? try commenting out the line to see the changes -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"> 
   <style type="text/css">
 
     /* make sure you understand what the body and #content styling is doing! */
@@ -42,65 +42,74 @@
 
     .red {
       /* use a hex value */
+      color: #DC143C;
     }
 
     .green {
       /* use a hex value */
+      color: #3CB371;
     }
 
     .mostly-black {
       /* use an rgb value */
+      color: rgb(24,0,0);
     }
 
     .transparent-black {
       /* add an alpha component to your color to make the text half transparent */
+      color: rgba(24,0,0,0.3);
     }
 
     .serif {
       /* set the font family to some serif font (look it up if you have to), and
       include a fallback in case the font is unavailable */
+      font-family: serif, Helvetica;
+
     }
 
     .bold {
-
+      font-style: bold;
     }
 
     .small-text {
       /* use a pixel font size */
+      font-size: 10px;
     }
 
     .relatively-small-text {
       /* use a relative value (em) to make the text half as large */
+      font-size: 0.5em;
     }
 
     .relatively-big-text {
       /* use a relative value (em) to make the text twice as large */
+      font-size: 2em;
     }
 
     /* what is the difference between a relative value and a pixel value? */
 
     .double-line-height {
-
+      line-height: 2em;
     }
 
     .align-right {
-
+      text-align: right;
     }
 
     .underline {
-    
+      text-decoration: underline;
     }
 
     .strikethrough {
-      
+      text-decoration: line-through;
     }
 
     .capitalize {
-
+      text-transform: capitalize;
     }
 
     .uppercase {
-
+      text-transform: uppercase;
     }
 
   </style>
