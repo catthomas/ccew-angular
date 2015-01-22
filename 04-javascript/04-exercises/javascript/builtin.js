@@ -41,10 +41,10 @@
 // Use the Math.abs() function so that the following tests pass:
 
 var x1 = 100;
-var absX1 = x1;
+var absX1 = Math.abs(x1);
 
 var y1 = -100;
-var absY1 = y1;
+var absY1 = Math.abs(y1);
 
 if (absX1 == 100) {
 	console.log("Test 1 passed");
@@ -62,7 +62,7 @@ if (absY1 == 100) {
 // Use the Math.sqrt() function so the following tests pass:
 
 var x2 = 16;
-var sqrtX2 = x2;
+var sqrtX2 = Math.sqrt(x2);
 
 if (sqrtX2 == 4) {
 	console.log("Test 3 passed");
@@ -77,10 +77,10 @@ if (sqrtX2 == 4) {
 // Use the Math.floor() and Math.ceil() functions so the following tests pass:
 
 var x3 = 3.14;
-var floorX3 = x3;
+var floorX3 = Math.floor(x3);
 
 var y3 = 3.14;
-var ceilingY3 = y3;
+var ceilingY3 = Math.ceil(y3);
 
 if (floorX3 == 3) {
 	console.log("Test 4 passed");
@@ -105,10 +105,10 @@ if (ceilingY3 == 4) {
 // Use charAt() so that the following tests pass:
 
 var x4 = "Hello World";
-var charAtX4 = x4;
+var charAtX4 = x4.charAt(6);
 
 var y4 = "Munchen";
-var charAtY4 = y4;
+var charAtY4 = y4.charAt(1);
 
 if (charAtX4 == 'W') {
 	console.log("Test 6 passed");
@@ -128,7 +128,7 @@ if (charAtY4 == 'u') {
 // Use the trim() function so that the following tests pass:
 
 var x5 = "   Hello Space        ";
-var trimX5 = x5;
+var trimX5 = x5.trim();
 
 if (trimX5 == "Hello Space") {
 	console.log("Test 8 passed");
@@ -141,7 +141,7 @@ if (trimX5 == "Hello Space") {
 // Use substr() so that the following tests pass:
 
 var x6 = "Hello World";
-var substrX6 = x6;
+var substrX6 = x6.substr(6,10);
 
 if (substrX6 == "World") {
 	console.log("Test 9 passed");
@@ -157,7 +157,7 @@ if (substrX6 == "World") {
 
 var x7 = "Hello World";
 var substring = "World";
-var indexOfX7 = x7;
+var indexOfX7 = x7.indexOf(substring);
 
 if (indexOfX7 == 6) {
 	console.log("Test 10 passed");

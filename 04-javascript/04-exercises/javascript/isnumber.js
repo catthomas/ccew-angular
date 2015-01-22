@@ -18,3 +18,8 @@ var input = process.argv[2];
  * isNaN()
  */
 
+if(isNaN(input)){
+	console.log(input, "is not a number.");
+} else {
+	console.log(input, "is a valid number.");
+}

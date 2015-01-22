@@ -16,7 +16,11 @@
  * console.log( hugeNumber() ) -> 18446744073709552000
  */
 
+ function hugeNumber() {
+ 	return Math.pow(2, 64);
+ }
 
+console.log(hugeNumber());
 
 
 /* 2. declare a function called testIt that takes one parameter,
@@ -36,7 +40,25 @@
  * testIt(100); -> "100 is postive"
  */
 
+function testIt(x){
+	switch(true){
+		case x < 0:
+			console.log(x, "is negative");
+			break;
+		case x == 0:
+			console.log(x, "is zero");
+			break;
+		case x > 0:
+			console.log(x, "is positive");
+			break;
+		default:
+			console.log(x, "is not a number");
+	}
+}
 
+testIt(-100);
+testIt(0);
+testIt(100);
 
 
 /* 3. declare a function called addSuffix that takes two parameters, 
@@ -52,7 +74,16 @@
  * console.log( addSuffix("Mary Beth Havard", false) ); -> "Mrs. Mary Beth Havard"
  */
 
+function addSuffix(name, male){
+	if(male){
+		return "Mr. " + name;
+	} else{
+		return "Mrs. " + name;
+	}
+}
 
+console.log(addSuffix("Phillip Dow", true));
+console.log(addSuffix("Cat Thomas", false));
 
 
 /* 4. consider the following two functions foo and bar
@@ -87,8 +118,8 @@ function bar(x) {
 
 /* uncomment the next three lines one at a time and run the program */
 
-// foo(12);
-// foo(15);
-// bar(12);
+foo(12);
+ foo(15);
+bar(12);
 
 

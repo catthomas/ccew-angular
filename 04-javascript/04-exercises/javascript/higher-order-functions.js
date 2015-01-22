@@ -26,8 +26,16 @@
 
 // 1, 1, 2, 3, 5, 8, 13, 21
 
-function select() {
-  
+function select(data, callback) {
+  var array = [];
+
+  for(var i = 0; i < data.length; ++i){
+    if(callback(data[i])){
+      array.push(data[i]);
+    }
+  }
+
+  return array;
 }
 
 // Example usage
@@ -45,8 +53,16 @@ var young = select(ages, function(item) {
 // arguments, but now only return those items that the callback function
 // returns false for.
 
-function reject() {
-  
+function reject(data, callback) {
+  var array = [];
+
+  for(var i = 0; i < data.length; ++i){
+    if(!callback(data[i])){
+      array.push(data[i]);
+    }
+  }
+
+  return array;
 }
 
 // Example usage
@@ -69,8 +85,14 @@ var old = reject(ages, function(item) {
 // If the callback never returns true for any of the items in the data
 // array, it should return undefined.
 
-function find() {
-  
+function find(data, callback) {
+  for(var i = 0; i < data.length; ++i){
+    if(callback(data[i])){
+      return data[i];
+    }
+  }
+
+  return undefined;
 }
 
 // Example usage
