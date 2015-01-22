@@ -1,2 +1,127 @@
-<!doctype html>
 <!-- fill it in, see http://getbootstrap.com/getting-started/#template for the template -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="http://bootswatch.com/yeti/bootstrap.min.css" rel="stylesheet">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+ 
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="container">
+  		<h1>Report Data</h1>
+  		<p class="lead">Watch those tadpoles fly!</p>
+  	</div>
+  	<div class="container">
+    <div class="row">
+    	<div class="col-md-4">
+    		<ul class="list-group">
+			  <a href="index.html"><li class="list-group-item">Index</li></a>
+			  <a href="about.html"><li class="list-group-item">People</li></a>
+			  <a href="signup.html"><li class="list-group-item">Sign Up</li></a>
+			</ul>
+    	</div>
+    	<div class="col-md-8">
+    		<script>
+    			var width = 700,
+				    height = 500;
+
+				var n = 100,
+				    m = 12,
+				    degrees = 180 / Math.PI;
+
+				var spermatozoa = d3.range(n).map(function() {
+				  var x = Math.random() * width,
+				      y = Math.random() * height;
+				  return {
+				    vx: Math.random() * 2 - 1,
+				    vy: Math.random() * 2 - 1,
+				    path: d3.range(m).map(function() { return [x, y]; }),
+				    count: 0
+				  };
+				});
+
+				var svg = d3.select("body").append("svg")
+				    .attr("width", width)
+				    .attr("height", height);
+
+				var g = svg.selectAll("g")
+				    .data(spermatozoa)
+				  .enter().append("g");
+
+				var head = g.append("ellipse")
+				    .attr("rx", 6.5)
+				    .attr("ry", 4);
+
+				g.append("path")
+				    .datum(function(d) { return d.path.slice(0, 3); })
+				    .attr("class", "mid");
+
+				g.append("path")
+				    .datum(function(d) { return d.path; })
+				    .attr("class", "tail");
+
+				var tail = g.selectAll("path");
+
+				d3.timer(function() {
+				  for (var i = -1; ++i < n;) {
+				    var spermatozoon = spermatozoa[i],
+				        path = spermatozoon.path,
+				        dx = spermatozoon.vx,
+				        dy = spermatozoon.vy,
+				        x = path[0][0] += dx,
+				        y = path[0][1] += dy,
+				        speed = Math.sqrt(dx * dx + dy * dy),
+				        count = speed * 10,
+				        k1 = -5 - speed / 3;
+
+				    // Bounce off the walls.
+				    if (x < 0 || x > width) spermatozoon.vx *= -1;
+				    if (y < 0 || y > height) spermatozoon.vy *= -1;
+
+				    // Swim!
+				    for (var j = 0; ++j < m;) {
+				      var vx = x - path[j][0],
+				          vy = y - path[j][1],
+				          k2 = Math.sin(((spermatozoon.count += count) + j * 3) / 300) / speed;
+				      path[j][0] = (x += dx / speed * k1) - dy * k2;
+				      path[j][1] = (y += dy / speed * k1) + dx * k2;
+				      speed = Math.sqrt((dx = vx) * dx + (dy = vy) * dy);
+				    }
+				  }
+
+				  head.attr("transform", headTransform);
+				  tail.attr("d", tailPath);
+				});
+
+				function headTransform(d) {
+				  return "translate(" + d.path[0] + ")rotate(" + Math.atan2(d.vy, d.vx) * degrees + ")";
+				}
+
+				function tailPath(d) {
+				  return "M" + d.join("L");
+				}
+			</script>
+    	</div>
+    </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
