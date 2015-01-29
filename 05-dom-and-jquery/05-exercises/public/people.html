@@ -17,9 +17,21 @@
     <![endif]-->
   </head>
   <body>
-    <h1>People</h1>
+    <div class="jumbotron">
+      <h1>People</h1>
+    </div>
 
     <!-- ******* insert html here ******* -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group" id="names">
+            </ul>
+        </div>
+        <div class="col-md-8 container" id="info">
+        </div>
+      </div>
+  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -33,6 +45,14 @@
     <script type="text/javascript">
       
       // use people array
+      $.each(people, function(i, person){
+        $('#names').append($('<li class="list-group-item" id="person">').text(person.firstName + " " + person.lastName));
+      });
+
+      $('#person').on('click', function() {
+        $(this).addClass('active');
+        $('#info').append($('<div class="container">').text(people[1].age));
+      });
 
     </script>
 
