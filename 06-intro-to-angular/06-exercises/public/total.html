@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,22 @@
       <h1>Total</h1>
 
       <!-- YOUR CODE HERE -->
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="item1" class="col-sm-2 control-label">Enter Amount</label>
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" id="dollarInput" ng-model="amount">
+                  <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+          </form>
+          <br>
+        <div>
+          <p> Your total plus 7.3% tax is {{amount + amount *.073}}
+          </p>
+        </div>
+      </div>
 
     </div>
 
