@@ -108,6 +108,11 @@ router.delete('/api/v1/posts/:id', function(req, res) {
 
 app.use(router);
 
+// catch all other requests and send the index with the angular application
+
+app.get('*', function(req, res) {
+  res.sendFile('index.html', {root: './public'});
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
